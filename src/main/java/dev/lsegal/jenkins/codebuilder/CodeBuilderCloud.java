@@ -278,6 +278,10 @@ public class CodeBuilderCloud extends Cloud {
   }
 
   @CheckForNull
+  public String getCredentialsId() {
+    return this.credentialsId;
+  }
+
   private static AmazonWebServicesCredentials getCredentials(@Nullable String credentialsId) {
     return AWSCredentialsHelper.getCredentials(credentialsId, jenkins());
   }
